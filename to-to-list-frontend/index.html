@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="newItem">New Item</button>
+        
+        <ul id="itemList">
+            <li class="list-item">
+                <span class="list-title">Title</span>
+                <span class="list-description">Description</span>
+                <span class="list-date">Deadline</span>
+                <!-- <button class="btn-update">Update</button>
+                <button class="btn-delete">Delete</button> -->
+            </li>
+        </ul>
+    </div>
+
+    <div id="formContainer" class="form-container hidden">
+        <form id="addItemForm" onsubmit="return false;" autocomplete="off">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+
+            <label for="endsAt">Deadline:</label>
+            <input type="date" id="endsAt" name="endsAt" required>
+
+            <button type="submit">Add Item</button>
+            <button type="button" id="cancelButton">Cancel</button>
+        </form>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>
